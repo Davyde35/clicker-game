@@ -1,0 +1,19 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    color: black;
+    
+}
+
+.center {
+    text-align: center;
+}
+
+#navbar {
+text-align: center;   
+}
+
+#click {
+    padding: 10 px;
+    background-color: antiquewhite;
+}
