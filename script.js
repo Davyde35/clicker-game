@@ -1,20 +1,25 @@
-//on compte le nombre de click
+
 let watts = 0;
 let nb_watts_clck = 1;
-let cost = 2;
+let cost = 2; // prix d'un upgrade
+
 // let autoClick = 1;
 // const autoClick = document.getElementById("auto-click")
 
+// on créer une fonction qui actualisera les éléments html 
 function actualisation_html() {
     document.querySelector('#resultat').innerText = watts;
     document.querySelector('#cost_upgrade').innerText = cost + ' watts';
 }
 
+//La constante powerCliked associe la valeurs watts au nombre de click
 const powerClicked = () => {
     watts += nb_watts_clck;
     console.log("watts", watts);
     actualisation_html();
 }
+
+// grâce à un écouteur d'événement, 
 document.querySelector(".upgrade").addEventListener("click", function(){
     if(watts >= cost) {
         watts = watts - cost;
@@ -24,29 +29,31 @@ document.querySelector(".upgrade").addEventListener("click", function(){
     actualisation_html()
 });
 
+// cette fonction créer une particule ayant une position en x et y
 function createParticule(x, y) {
     const powerClicks = document.querySelector(".power-clicks");
-    const particule = document.createElement("img");
-    particule.setAttribute("src", "./img/power.png");
-    particule.setAttribute("class", "power-particule");
+    const particule = document.createElement("img"); // on créer une image
+    particule.setAttribute("src", "./img/power.png"); // on attribue un document à l'image
+    particule.setAttribute("class", "power-particule"); // on associe une classe
     particule.style.left = x + "px";
     particule.style.top = y + "px";
 
-    powerClicks.appendChild(particule);
+        powerClicks.removeChild(particule); // on créer un enfant qui implémentera une image dans la classe power-clks
+        powerClicks.appendChild(particule); 
 
        const clickSound = document.getElementById("son");
        clickSound.currentTime = 0;
        clickSound.play();
 
     setTimeout(() => {
-        powerClicks.removeChild(particule);
+        powerClicks.removeChild(particule); 
     }, 3000);
 }
-
+// quand on click sur l'image principale, on appelle les deux fonctions deux jeux, la particule et le powercliker
 const power_img = document.querySelector("#power_img");
 power_img.addEventListener("click", (evenement) => {
     createParticule(evenement.clientX, evenement.clientY);
-    powerClicked();
+    powerClicked(); // on appelle la constante powerCliked
 });
 
 
