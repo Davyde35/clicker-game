@@ -6,7 +6,7 @@ let cost = 2; // prix d'un upgrade
 // let autoClick = 1;
 // const autoClick = document.getElementById("auto-click")
 
-// on créer une fonction qui actualisera les éléments html 
+// fonction qui actualisera les éléments html 
 function actualisation_html() {
     document.querySelector('#resultat').innerText = watts;
     document.querySelector('#cost_upgrade').innerText = cost + ' watts';
@@ -19,7 +19,7 @@ const powerClicked = () => {
     actualisation_html();
 }
 
-// grâce à un écouteur d'événement, 
+// grâce à un écouteur d'événement, on définit un coût en watt pour que les clicks aient plus de valeurs
 document.querySelector(".upgrade").addEventListener("click", function(){
     if(watts >= cost) {
         watts = watts - cost;
@@ -38,8 +38,7 @@ function createParticule(x, y) {
     particule.style.left = x + "px";
     particule.style.top = y + "px";
 
-        powerClicks.removeChild(particule); // on créer un enfant qui implémentera une image dans la classe power-clks
-        powerClicks.appendChild(particule); 
+        powerClicks.appendChild(particule);  // l'image créé sera associé en tant qu'enfant de la const par la la classe power-clicks
 
        const clickSound = document.getElementById("son");
        clickSound.currentTime = 0;
