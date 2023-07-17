@@ -14,11 +14,13 @@ body {
 
 #container {
     justify-content: center;   
+    height: 60vh;
 }
+
 #navbar {
     display: block;
-text-align: center;   
-justify-content: center;
+    text-align: center;   
+    justify-content: center;
 }
 
 #titre_resultat {
@@ -29,22 +31,22 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 color: white;
 }
 
-
 #upgrade {
     color: white;
-    padding: 50px;
+    padding: 20px;
 }
+
 
 #section {
 margin-top: 5%;
 }
 
 .power_img:active {
-    width: 285px;
+    width: 240px;
 }
 
 .power_img {
-    width :15%;
+    width :250px;
     cursor: pointer;
     filter : drop-shadow(0 0 50px white);
     animation : rotates 100s linear infinite;
@@ -53,8 +55,6 @@ margin-top: 5%;
 .power-particule {
     width: 30px;
     position: absolute;
-    top: -30px;
-    left: -30px;
     animation: power-up 1s linear forwards;
 }
 
