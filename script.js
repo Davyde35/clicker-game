@@ -2,6 +2,8 @@
 let watts = 0;
 let nb_watts_clck = 1;
 let cost = 2;
+// let autoClick = 1;
+// const autoClick = document.getElementById("auto-click")
 
 function actualisation_html() {
     document.querySelector('#resultat').innerText = watts;
@@ -9,14 +11,10 @@ function actualisation_html() {
 }
 
 const powerClicked = () => {
-
     watts += nb_watts_clck;
     console.log("watts", watts);
     actualisation_html();
-
 }
-//document.querySelector('#power_img').addEventListener("click", powerClicked); 
-
 document.querySelector(".upgrade").addEventListener("click", function(){
     if(watts >= cost) {
         watts = watts - cost;
@@ -25,7 +23,6 @@ document.querySelector(".upgrade").addEventListener("click", function(){
     } 
     actualisation_html()
 });
-
 
 function createParticule(x, y) {
     const powerClicks = document.querySelector(".power-clicks");
@@ -36,7 +33,7 @@ function createParticule(x, y) {
     particule.style.top = y + "px";
 
     powerClicks.appendChild(particule);
-    
+
        const clickSound = document.getElementById("son");
        clickSound.currentTime = 0;
        clickSound.play();
@@ -52,3 +49,8 @@ power_img.addEventListener("click", (evenement) => {
     powerClicked();
 });
 
+
+// function autoClick () {
+
+
+// }

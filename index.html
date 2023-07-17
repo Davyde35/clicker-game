@@ -11,20 +11,14 @@
       <nav id="navbar">
         <h1 class="center">Power Clicker Game</h1>     
         <div id="container">
+          <audio id="son" src="./audio/clac.mp3"></audio>
           <div id="titre_resultat"><span id="resultat">0</span> Watts</div>
           <img id="power_img" class="power_img" src="./img/power.png" alt=""/>
           </div>
-          
-          <audio id="son" src="./audio/clac.mp3"></audio>
-         
           <div id="mutiplier">
-            <div> <h2>augmenter les watts au clic</h2></div>
-             <button class="upgrade">upgrade</button>
-
-          <div id="container">
-            <div id="upgrade"><span id="cost_upgrade">0</span></div>
+             <button class="upgrade">upgrade<span id="cost_upgrade"> 2 watts</span></button>
+             <!-- <button id="auto-click" class="upgrade">clicker<span id="cost_upgrade"> x watts</span></button> -->
           </div>
-          <p id="cost_upgrade"></p>
         </nav>
       </main>
       <div class="power-clicks"></div>     
