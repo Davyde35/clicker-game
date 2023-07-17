@@ -2,6 +2,9 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     color: black;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(62, 54, 170);
     
 }
 
@@ -9,11 +12,78 @@ body {
     text-align: center;
 }
 
+#container {
+    justify-content: center;   
+}
 #navbar {
+    display: block;
 text-align: center;   
+justify-content: center;
 }
 
-#click {
-    padding: 10 px;
-    background-color: antiquewhite;
+#titre_resultat {
+margin-bottom: 50px;
+font-size: 3rem;
+font-style: italic;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: white;
+}
+
+
+#upgrade {
+    color: white;
+    padding: 50px;
+}
+
+#section {
+margin-top: 5%;
+}
+
+.power_img:active {
+    width: 285px;
+}
+
+.power_img {
+    width :15%;
+    cursor: pointer;
+    filter : drop-shadow(0 0 50px white);
+    animation : rotates 100s linear infinite;
+}
+
+.power-particule {
+    width: 30px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    animation: power-up 1s linear forwards;
+}
+
+/* Keyframes */
+
+@keyframes rotates {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes power-up {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        top: 0;
+    }
+}
+
+@keyframes clickEffect {
+    to {
+        transform: rotate(28deg) scale(.8);
+    }
+    from {
+        transform: rotate(28deg) scale(.7);
+    }
 }

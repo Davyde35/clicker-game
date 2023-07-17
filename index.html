@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../cookie cliker/style.css">
-    <link rel="stylesheet" href="../cookie cliker/script.js">
-    <title>Document</title>
-
-</head>
-<body>
-
-   <nav id="navbar">
-
-        <div>
-            <h1 class="center">
-             clicker 
-            </h1>
-        </div>
-        <div>
-            <button id="click" onclick="">click</button>
-        </div>
-     <h2>score :</h2>
-   </nav>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Power_clicker</title>
+  </head>
+  <body>
+    <main>
+      <nav id="navbar">
+        <h1 class="center">Power Clicker Game</h1>     
+        <div id="container">
+          <div id="titre_resultat"><span id="resultat">0</span> Watts</div>
+          <img id="power_img" class="power_img" src="./img/logo_energie2.png" alt="" />
+          <div id="mutiplier">
+            <h2>augmenter les watts au clic</h2>
+            <button class="upgrade">upgrade</button>
+          </div>
+          <div id="container">
+            <div id="upgrade"><span id="cost_upgrade">0</span></div>
+          </div>
+          <p id="cost_upgrade"></p>
+        </nav>
+      </main>
+      <div class="power-clicks"></div>     
+      </div>       
+  </body>
+  <script src="./script.js"></script>
 </html>
